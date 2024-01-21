@@ -1,0 +1,17 @@
+nav div a {
+  position: relative;
+}
+
+nav div a::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: orange;
+  opacity: 0;
+  bottom: 0;
+}
+
+nav div a:hover::after {
+  opacity: 1;
+}

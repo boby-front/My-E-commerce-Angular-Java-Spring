@@ -1,0 +1,30 @@
+<div
+  (mouseover)="onMouseOver()"
+  (mouseleave)="onMouseLeave()"
+  class="relative w-[285px] rounded overflow-hidden bg-slate-100 cursor-pointer hover:-translate-y-3 hover:shadow-2xl duration-200"
+>
+  <div
+    [class.right-0]="isHovered"
+    class="absolute w-full h-full flex items-center justify-center right-[-100%] duration-300"
+    style="background-color: rgba(117, 123, 131, 0.5)"
+  >
+    <button
+      class="text-brownPrimary-0 bg-slate-50 py-3 px-10 font-semibold -translate-y-1/2"
+      (click)="addToCart($event)"
+    >
+      Add to Cart
+    </button>
+  </div>
+  <span
+    class="absolute top-5 right-5 text-slate-100 p-2 rounded-[50%] w-[45px] h-[45px] flex items-center justify-center"
+    [class.bg-green-400]="info"
+    [class.bg-red-400]="!info && promo"
+    >{{ info || promo }}</span
+  >
+  <img [src]="image" [alt]="title" class="h-[300px]" />
+  <div class="flex flex-col gap-3 m-3 relative">
+    <h4 class="font-bold font-pop">{{ title }}</h4>
+    <p class="text-slate-500">{{ description }}</p>
+    <p class="font-bold font-pop">Rp {{ price }}</p>
+  </div>
+</div>
