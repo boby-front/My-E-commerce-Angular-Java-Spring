@@ -9,9 +9,12 @@ module.exports = {
         pop: ["poppins"],
       },
       colors: {
-        brownPrimary: ["#b88e2f"],
-        brownLight: ["#fff3e3"],
+        brown: {
+          primary: "#b88e2f", 
+        },
+        brownLight: "#fff3e3",
       },
+    
     },
   },
   plugins: [],

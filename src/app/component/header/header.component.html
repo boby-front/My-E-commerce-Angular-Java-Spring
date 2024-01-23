@@ -9,10 +9,12 @@
     </div>
 
     <nav class="font-medium flex gap-[40px]">
-      <a href="" class="hover:-translate-y-3 p-7 duration-200">Home</a>
+      <a routerLink="" class="hover:-translate-y-3 p-7 duration-200">Home</a>
       <a href="" class="hover:-translate-y-3 p-7 duration-200">Shop</a>
       <a href="" class="hover:-translate-y-3 p-7 duration-200">About</a>
-      <a href="" class="hover:-translate-y-3 p-7 duration-200">Contact</a>
+      <a routerLink="/contact" class="hover:-translate-y-3 p-7 duration-200"
+        >Contact</a
+      >
     </nav>
 
     <div class="flex gap-[35px]">
@@ -27,6 +29,7 @@
       ></i
       ><i
         class="fa-solid fa-cart-shopping text-xl cursor-pointer hover:scale-150 duration-200 hover:text-green-500"
+        (click)="openModale()"
       ></i>
     </div>
   </div>
